@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  api:
+    image: gsengun/redis-dotnet
+    build: .
+    ports:
+      - 5000:80
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
